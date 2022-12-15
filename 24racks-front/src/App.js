@@ -1,5 +1,7 @@
 import HomePageUser from './components/HPU/HPU';
-import React, {useState} from 'react' 
+import { Provider } from "react-redux";
+import React, {useState} from 'react'; 
+import store from './store/index';
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -9,7 +11,7 @@ function App() {
     else setLogin(false);
   }, []);
 
-  if(!login) return (<HomePageUser/>);
+  if(!login) return (<Provider store={store}><HomePageUser/></Provider>);
 }
 
 export default App;

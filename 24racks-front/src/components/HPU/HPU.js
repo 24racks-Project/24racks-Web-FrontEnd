@@ -1,8 +1,16 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import GamesAvailable from '../GamesAvailable/GamesAvailable';
 import { ThemeProvider, createTheme } from "@mui/material";
 import { blueGrey, indigo } from "@mui/material/colors";
-import { Switch, Route } from "react-router-dom";
+import GameServer from '../GameServer/GameServer';
+import HostingWeb from '../HostingWeb/HostingWeb';
 import SideBar from "../SideBar/SideBar";
+import Contact from '../Contact/Contact';
+import AboutUs from '../AboutUs/AboutUs';
+import SignUp from '../SignUp/SignUp';
 import TopBar from "../TopBar/TopBar";
+import SignIn from '../SignIn/SignIn';
+import Offer from '../Offer/Offer';
 import { useState } from "react";
 
 const theme = createTheme({
@@ -12,21 +20,6 @@ const theme = createTheme({
   }
 })
 
-function HostingWeb(){
-  return <div></div>;
-}
-
-function GameServer(){
-  return <div></div>;
-}
-
-function Offer(){
-  return <div></div>;
-}
-
-function GamesAvailable(){
-  return <div></div>;
-}
 
 function HomePageUser() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -41,23 +34,21 @@ function HomePageUser() {
             <SideBar variant="temporary" open={isDrawerOpen} onClose={actionOpen}/>
             <TopBar actionOpen={actionOpen}/>
           </ThemeProvider>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/HostingWeb" component={HostingWeb} />
+              <Route path="/GameServer" component={GameServer} />
+              <Route path="/Offer" component={Offer} />
+              <Route path="/GamesAvailable" component={GamesAvailable} />
+              <Route path="/signIn" component={SignIn} />
+              <Route path="/signUp" component={SignUp} />
+              <Route path="/Contact" component={Contact} />
+              <Route path="/AboutUs" component={AboutUs} />
+              <Route path="/" component={GamesAvailable} />
+            </Switch>
+          </BrowserRouter>
       </div>
     ); 
-
-
-/**
- *           <ThemeProvider>
-            <SideBar variant="temporary" open={isDrawerOpen} onClose={actionOpen}/>
-            <TopBar actionOpen={actionOpen}/>
-          </ThemeProvider>
-          <Switch>
-            <Route path="/HostingWeb" component={HostingWeb} />
-            <Route path="/GameServer" component={GameServer} />
-            <Route path="/Offer" component={Offer} />
-            <Route path="/GamesAvailable" component={GamesAvailable} />
-            <Route path="/" component={GamesAvailable} />
-          </Switch>
- */
 }
 
 export default HomePageUser;

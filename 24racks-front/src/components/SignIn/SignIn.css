@@ -1,0 +1,11 @@
+.SignIn {
+    margin-top: 10%;
+    margin-left: calc(50% - 100px);
+    background-color: #799fec;
+    display: inline-block;
+}
+
+.listButtons {
+    margin: 20px;
+    background-color: #ffffff;
+}

@@ -13,15 +13,15 @@ function ButtonTopBar({href, buttonName}){
     >{buttonName}</Link>
 }
 
-function TotalButtonsTopBar(){
-    return (
-        <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-          <ButtonTopBar buttonName= 'Hosting web' href=""/>
-          <ButtonTopBar buttonName= 'Game server' href=""/>
-          <ButtonTopBar buttonName= 'offer' href=""/>
-          <ButtonTopBar buttonName= 'games available' href=""/>
-        </Box>
-    )
+function TotalButtonsTopBar(){ 
+  return (
+      <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+        <ButtonTopBar buttonName= 'Hosting web' href="/HostingWeb"/>
+        <ButtonTopBar buttonName= 'Game server' href="/GameServer"/>
+        <ButtonTopBar buttonName= 'offer' href="/Offer"/>
+        <ButtonTopBar buttonName= 'games available' href="/GamesAvailable"/>
+      </Box>
+  );
 }
 
 function TopBar({actionOpen}){

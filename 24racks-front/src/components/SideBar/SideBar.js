@@ -2,7 +2,7 @@ import { Toolbar, Link, Divider, Drawer, List, ListItem, ListItemText, Typograph
 import {styleTitleSideBar, styleToolBar} from '../styles';
 
 function ButtonSideBar({href, ButtonName}){
-    return <ListItem button component={Link} to= {href}>
+    return <ListItem button component={Link} href= {href}>
         <ListItemText>
           {ButtonName}
         </ListItemText>
@@ -25,13 +25,13 @@ function SideBar({variant, open, onClose}){
         </Toolbar>
         <Divider/>
         <List component='nav'>
-            <ButtonSideBar href="" ButtonName="SIGN IN"/>
-            <ButtonSideBar href="" ButtonName="SIGN UP"/>
+            <ButtonSideBar href="/signIn" ButtonName="SIGN IN"/>
+            <ButtonSideBar href="/signUp" ButtonName="SIGN UP"/>
         </List>
         <Divider/>
         <List component='nav'>
-            <ButtonSideBar href="" ButtonName="CONTACT"/>
-            <ButtonSideBar href="" ButtonName="ABOUT US"/>
+            <ButtonSideBar href="/Contact" ButtonName="CONTACT"/>
+            <ButtonSideBar href="/AboutUs" ButtonName="ABOUT US"/>
         </List>
       </Drawer>
     );
