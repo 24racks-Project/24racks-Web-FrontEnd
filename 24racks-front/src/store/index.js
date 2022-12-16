@@ -1,8 +1,10 @@
 import {createStore, combineReducers} from 'redux';
 import reduceSignIn from './SignIn/reduce';
+import reduceSignUp from './SignUp/reduce';
 
 const reducers = combineReducers({
-    reduceSignIn
+    reduceSignIn,
+    reduceSignUp
 });
 
 const store =  createStore(
