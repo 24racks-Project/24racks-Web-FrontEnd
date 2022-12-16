@@ -5,7 +5,6 @@ import { blueGrey, indigo } from "@mui/material/colors";
 import GameServer from '../GameServer/GameServer';
 import HostingWeb from '../HostingWeb/HostingWeb';
 import SideBar from "../SideBar/SideBar";
-import Contact from '../Contact/Contact';
 import AboutUs from '../AboutUs/AboutUs';
 import SignUp from '../SignUp/SignUp';
 import TopBar from "../TopBar/TopBar";
@@ -42,7 +41,6 @@ function HomePageUser() {
               <Route path="/GamesAvailable" component={GamesAvailable} />
               <Route path="/signIn" component={SignIn} />
               <Route path="/signUp" component={SignUp} />
-              <Route path="/Contact" component={Contact} />
               <Route path="/AboutUs" component={AboutUs} />
               <Route path="/" component={GamesAvailable} />
             </Switch>

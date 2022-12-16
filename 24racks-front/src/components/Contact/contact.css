@@ -1,0 +1,21 @@
+.Contact {
+    background:  #d1e0ff;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.myData {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.myData, .elems{
+    float: left;
+    list-style: none;
+    margin: 5px;
+}
+
+.title {
+    font-size: 14px;
+    margin-bottom: -10px;
+}
