@@ -1,6 +1,5 @@
 import { Toolbar, Link, Divider, Drawer, List, ListItem, ListItemText, Typography } from "@mui/material";
 import {styleTitleSideBar, styleToolBar} from '../styles';
-import Contact from '../Contact/Contact';
 import './sideBar.css';
 
 function ButtonSideBar({href, ButtonName}){
@@ -28,13 +27,6 @@ function SideBar({variant, open, onClose}){
             <ButtonSideBar href="/signIn" ButtonName="SIGN IN"/>
             <ButtonSideBar href="/signUp" ButtonName="SIGN UP"/>
         </List>
-        <div className="inferior">
-          <Divider/>
-          <List component='nav'>
-            <ButtonSideBar href="/AboutUs" ButtonName="ABOUT US"/>
-            <Contact/>
-          </List>
-        </div>
       </Drawer>
     );
 }

@@ -15,7 +15,7 @@ function ButtonTopBar({href, buttonName}){
 
 function TotalButtonsTopBar(){ 
   return (
-      <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ flex: 1, display: 'flex', justifyContent: 'right' }}>
         <ButtonTopBar buttonName= 'Hosting web' href="/HostingWeb"/>
         <ButtonTopBar buttonName= 'Game server' href="/GameServer"/>
         <ButtonTopBar buttonName= 'offer' href="/Offer"/>

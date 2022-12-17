@@ -15,12 +15,12 @@
     list-style-type: none;
 }
 
-.myData, .elems{
+.myData .elems{
     float: left;
     list-style: none;
     margin: 5px;
 }
 
-.elems, .Short {
+.myData .elems > .Short {
     color:#ffffff
 }
