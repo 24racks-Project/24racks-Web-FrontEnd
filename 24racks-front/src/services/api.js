@@ -3,7 +3,8 @@ import axios from "axios";
 
 const URL = 'http://localhost:8000/'; 
 const endpoints = {
-        register: '/register'
+        register: '/register',
+        login: '/login'
 };
 
 function alertSwal(msg, icon){

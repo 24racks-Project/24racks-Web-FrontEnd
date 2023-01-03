@@ -1,29 +1,22 @@
-const sendDataUser = () => {
+const sendDataLogin = (setIsSignUpUser) => {
     return {
-        type: "SEND_DATA",
-        data: "send the user data to register"
+        type: "SEND_DATA_LOGIN",
+        data: setIsSignUpUser
     }
 };
 
-const modifyDataName = (name) => {
+const dataName = (name) => {
     return {
-        type: "GET_DATA_NAME",
+        type: "DATA_NAME",
         data: name
     }
 };
 
-const modifyDataPassword = (password) => {
+const dataPassword = (password) => {
     return {
-        type: "GET_DATA_PASS",
+        type: "DATA_PASS",
         data: password
     }
 };
 
-const modifyDataEmail = (email) => {
-    return {
-        type: "GET_DATA_EMAIL",
-        data: email
-    }
-};
-
-export {sendDataUser, modifyDataName, modifyDataPassword, modifyDataEmail};
+export {sendDataLogin, dataName, dataPassword};

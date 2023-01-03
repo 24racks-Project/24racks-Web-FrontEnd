@@ -1,7 +1,7 @@
+import signUpService from "../../services/signUpService";
 const defaultDataUser = {
     "username": "",
-    "password": "",
-    "email": ""
+    "password": ""
 };
 
 function reducer(dataUser = defaultDataUser, action){
@@ -12,10 +12,9 @@ function reducer(dataUser = defaultDataUser, action){
         }; 
     };
     
-    if (action.type === 'GET_DATA_NAME') return dataUserChange({attribute:'username', value: action.data});
-    else if (action.type === 'GET_DATA_PASS') return dataUserChange({attribute:'password', value: action.data});
-    else if (action.type === 'GET_DATA_EMAIL') return dataUserChange({attribute:'email', value: action.data});
-    //else if(action.type === 'SEND_DATA') loadDataUser(dataUser);
+    if (action.type === 'DATA_NAME') return dataUserChange({attribute:'username', value: action.data});
+    else if (action.type === 'DATA_PASS') return dataUserChange({attribute:'password', value: action.data});
+    else if(action.type === 'SEND_DATA_LOGIN') signUpService(dataUser, action.data);
 
     return dataUser;
 }

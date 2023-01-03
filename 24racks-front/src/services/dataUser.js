@@ -20,7 +20,7 @@ function verifyName(name){
   return !nameIsEmpty & !nameHaveSpace;
 }
 
-export function verifyDataUser(dataUser){
+function verifyDataUser(dataUser){
   if (!verifyName(dataUser.username)){
     alertSwal('El nombre no puede estar vacío ni contener espacios', 'warning');
     return false;
@@ -33,3 +33,9 @@ export function verifyDataUser(dataUser){
   }
   return true;
 }
+
+function verifyDataLoginUser(dataLoginUser) {
+    return (dataLoginUser.username !== "" && dataLoginUser.password !== "");
+}
+
+export {verifyDataUser, verifyDataLoginUser};
