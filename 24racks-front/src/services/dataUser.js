@@ -38,4 +38,4 @@ function verifyDataLoginUser(dataLoginUser) {
     return (dataLoginUser.username !== "" && dataLoginUser.password !== "");
 }
 
-export {verifyDataUser, verifyDataLoginUser};
+export {verifyDataUser, verifyDataLoginUser, verifyPassword};

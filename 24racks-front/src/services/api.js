@@ -5,7 +5,8 @@ const URL = 'http://localhost:8000/';
 const endpoints = {
         register: '/register',
         login: '/login',
-        myData: "/dataUser"
+        myData: "/dataUser",
+        newPassword: "/newPassword"
 };
 
 function alertSwal(msg, icon){

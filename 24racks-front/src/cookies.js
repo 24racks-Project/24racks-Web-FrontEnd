@@ -9,14 +9,15 @@ function setCookie(key, value, exdays){
 
 function getCookie(key){
     const name = key + "=";
+    console.log(document.cookie[key]);
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
     const re = new RegExp(name);
     const result = ca.filter(
         c => re.test(c)
     )
-    
-    if (result.length !== 0) return result[0].split('=')[1];
+
+    if (result.length !== 0) return result[0].slice(result[0].indexOf('=') + 1, result[0].length);
     else return "";
   }
 
