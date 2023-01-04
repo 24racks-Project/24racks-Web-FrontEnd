@@ -1,0 +1,11 @@
+.Mydata {
+    margin-top: 10%;
+    margin-left: calc(50% - 400px);
+    background-color: #799fec;
+    display: inline-block;
+}
+
+.MyDataElem {
+    margin: 20px;
+    background-color: #ffffff;
+}

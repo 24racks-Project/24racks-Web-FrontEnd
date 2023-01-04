@@ -16,7 +16,7 @@ function getCookie(key){
         c => re.test(c)
     )
     
-    if (result) return result[0];
+    if (result) return result[0].split('=')[1];
     else return "";
   }
 
