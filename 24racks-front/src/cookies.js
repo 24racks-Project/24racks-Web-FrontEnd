@@ -4,7 +4,7 @@ function setCookie(key, value, exdays){
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     const expires = "expires="+ d.toUTCString();
     const v = encodeURIComponent(value)
-    document.cookie = key + "=" + v + ";" + expires + ";path=/";
+    document.cookie = key + "=" + v + "; " + expires + "; path=/";
 }
 
 function getCookie(key){
@@ -16,14 +16,14 @@ function getCookie(key){
         c => re.test(c)
     )
     
-    if (result) return result[0].split('=')[1];
+    if (result.length !== 0) return result[0].split('=')[1];
     else return "";
   }
 
 function deleteCookie(key){
     const d = new Date();
     d.setTime(d.getTime() + (-10*24*60*60*1000));
-    document.cookie = key + "=;expires="+ d.toUTCString() + ";path=/";
+    document.cookie = key + "=; expires="+ d.toUTCString() + "; path=/";
 }
 const Cookies = {setCookie, getCookie, deleteCookie};
 

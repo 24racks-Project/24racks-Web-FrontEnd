@@ -6,7 +6,7 @@ async function myDataService(callback){
     const tkn = Cookies.getCookie("tkn");
 
     return await API.post(endpoints.myData, {username: username, token: tkn})
-      .then( (response) =>  callback(response.detail))
+      .then( (response) => callback(response.data))
       .catch( (_) => alertSwal('Error', 'error'));
 }
 
