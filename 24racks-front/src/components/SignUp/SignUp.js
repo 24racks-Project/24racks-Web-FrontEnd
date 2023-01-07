@@ -1,7 +1,6 @@
 import {sendDataLogin, dataName, dataPassword} from '../../store/SignUp/actions';
 import { TextField, List, ListItem } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { useHistory } from 'react-router-dom';
+import React from "react";
 import {connect} from 'react-redux';
 import './SignUp.css';
 

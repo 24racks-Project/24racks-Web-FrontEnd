@@ -1,0 +1,12 @@
+.GameServer {
+    margin-top: 10%;
+    margin-left: calc(50% - 172px);
+    background-color: #799fec;
+    display: inline-block;
+}
+
+.GameServerElems {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+}

@@ -9,7 +9,6 @@ function setCookie(key, value, exdays){
 
 function getCookie(key){
     const name = key + "=";
-    console.log(document.cookie[key]);
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
     const re = new RegExp(name);
