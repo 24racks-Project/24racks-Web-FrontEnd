@@ -16,6 +16,7 @@ import SignIn from '../SignIn/SignIn';
 import MyData from '../MyData/MyData';
 import Cookies from '../../cookies';
 import Offer from '../Offer/Offer';
+import Success from '../GameServer/Success';
 
 const theme = createTheme({
   palette: {
@@ -35,6 +36,7 @@ function RoutesLogin({setIsLogin}){
       <Route path="/Setting" component={Setting} />
       <Route path="/HiredServices" component={HiredServices} />
       <Route path="/Offer" component={Offer} />
+      <Route path="/saveGameService/:username/:token/:id_service/:id_plan/:id_transaction" component={() => Success({})} />
       <Route path="/" component={GamesAvailable} />
     </Switch>
 }

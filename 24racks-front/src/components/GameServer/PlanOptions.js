@@ -2,11 +2,10 @@ import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import React from 'react';
 
-function PlanOptions({options, setChangeOption, postPlan, postPrice}){
+function PlanOptions({options, setChangeOption, postPlan}){
   const changePlanxID = (id_plan) => {
     const plan = options.find( elem => id_plan === elem.id_plan.toString());
     postPlan(plan.id_plan);
-    postPrice(plan.price);
     setChangeOption(plan);
   };
 

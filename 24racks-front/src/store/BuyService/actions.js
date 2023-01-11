@@ -19,12 +19,4 @@ const postPlan = (id_Plan) => {
     }
 };
 
-const postPrice = (price) => {
-    return {
-        type: "POST_DATA_PRICE",
-        data: price
-    }
-}
-
-
-export {postGame, postPlan, sendDataPlan, postPrice};
+export {postGame, postPlan, sendDataPlan};

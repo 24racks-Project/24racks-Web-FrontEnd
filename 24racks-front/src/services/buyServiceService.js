@@ -8,7 +8,10 @@ async function buyServiceService(dataBuyService){
 
   if (verifyDataLoginUser(dataBuyService))
     return await API.post(endpoints.buyService, dataBuyService)
-      .then( (response) =>  window.location.assign(response.data.redirect))
+      .then( (response) =>  {
+        console.log(response.data);
+        window.location.assign(response.data.redirect)
+      })
       .catch( (_) => alertSwal('Error en los datos', 'error'));
   else
     return alert("necesita loguearse");

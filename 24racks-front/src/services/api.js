@@ -1,14 +1,15 @@
 //import swal from 'sweetalert';
 import axios from "axios";
 
-const URL = 'https://proud-cheetah-80.loca.lt/'; 
+const URL = 'https://shan.loca.lt'; 
 const endpoints = {
         register: '/register',
         login: '/login',
         myData: "/dataUser",
         newPassword: "/newPassword",
         gameServer: "/gamesServer",
-        buyService: "/buyService"
+        buyService: "/buyService",
+        saveGameService: "/saveGameService"
 };
 
 function alertSwal(msg, icon){

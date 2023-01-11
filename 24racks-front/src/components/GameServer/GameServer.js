@@ -1,4 +1,4 @@
-import {postGame, postPlan, sendDataPlan, postPrice} from '../../store/BuyService/actions';
+import {postGame, postPlan, sendDataPlan} from '../../store/BuyService/actions';
 import { useHistory } from "react-router-dom";
 import GamesOptions from './GameOptions';
 import React, { useState, useEffect } from 'react';
@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import './GameServer.css';
 import gameServerService from '../../services/gameServerService';
 
-function GameServer({postGame, postPlan, sendDataPlan, postPrice}){
+function GameServer({postGame, postPlan, sendDataPlan}){
   const [dataGameOptions, setDataGameOptions] = useState([]);
   const [changeGame, setChangeGame] = useState([]);
   const [changeOption, setChangeOption] = useState(-1);
@@ -31,9 +31,9 @@ function GameServer({postGame, postPlan, sendDataPlan, postPrice}){
       <div className='GameServerElems'>
         <h1>GameServer</h1>
         <GamesOptions options= {dataGameOptions} setChangeGame= {setChangeGame} postGame={postGame} />
-        <PlanOptions options= {changeGame.plans?? []} setChangeOption= {setChangeOption} postPlan={postPlan} postPrice={postPrice} />
+        <PlanOptions options= {changeGame.plans?? []} setChangeOption= {setChangeOption} postPlan={postPlan} />
         <input type="button" value= 'buy plan' name= 'buyPlan' onClick={() => verifyLogin()}/>
       </div>
     </div>;
 }
-export default connect(null, {postGame, postPlan, sendDataPlan, postPrice})(GameServer);
+export default connect(null, {postGame, postPlan, sendDataPlan})(GameServer);
