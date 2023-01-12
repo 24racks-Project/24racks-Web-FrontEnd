@@ -31,7 +31,7 @@ function TotalButtonsTopBar(){
 
 function TopBar({actionOpen}){
     return (
-        <div>
+        <div className="home">
             
             <AppBar sx={{ ...styleAppBar }}>
               <Toolbar sx={{ ...styleToolBar }}>
