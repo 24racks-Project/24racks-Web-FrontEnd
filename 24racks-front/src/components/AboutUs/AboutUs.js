@@ -1,6 +1,8 @@
+import './AboutUs.css';
+
 function AboutUs(){
-  return <div>
-  <h1>AboutUs</h1>
+  return <div className="AboutUs">
+  <h1 className='title'>AboutUs</h1>
 </div>;
 }
 

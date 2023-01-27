@@ -1,0 +1,25 @@
+.SignUp {
+    margin-top: 10%;
+    margin-left: calc(50% - 230px);
+    background-color: #799fec;
+    display: inline-block;
+}
+
+.listButtons {
+    margin: 20px;
+}
+
+.myData {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.myData .elems{
+    float: left;
+    list-style: none;
+    margin: 5px;
+}
+
+.myData .elems > .Short {
+    color:#ffffff
+}
